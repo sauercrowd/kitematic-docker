@@ -10,7 +10,7 @@ To start it, take a look at the start.sh script.
 First, take the MIT-MAGIC-TOKEN from the host to be able to access your local Xorg-Server:
 
     set -f; IFS=$'\n'
-    MIT-MAGIC-COOKIES=($(xauth list))
+    mitcookies=($(xauth list))
     set +f; unset IFS
 
 Now the magic cookes are saved in the MIT-MAGIC-COOKIES variable.
