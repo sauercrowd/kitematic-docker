@@ -10,7 +10,9 @@ RUN git clone https://github.com/zedtux/kitematic
 WORKDIR /opt/kitematic/
 RUN git checkout linux-support
 RUN make
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT cd /opt/kitematic; npm start
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT /entrypoint.sh
 
 
