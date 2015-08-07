@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for i in "${MAGICCOOKIES[@]}"
 do 
 xauth add $i
