@@ -1,2 +1,2 @@
-for i in "${MIT-MAGIG-COOKIES[@]}"; do xauth add $i; done
+for i in "${MITCOOKIES[@]}"; do xauth add $i; done
 cd /opt/kitematic; npm start
