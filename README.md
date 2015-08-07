@@ -24,6 +24,7 @@ Next, start your container:
     -v /var/run/docker.sock:/var/run/docker.sock \
     --privileged=true -t jonadev95/kitematic-docker
 
+
 So, we need our X11 socket, the display variable, the magic cookies, and our docker socket. (And make it privileged to be able to write to the sockets)
 
 That's all!
