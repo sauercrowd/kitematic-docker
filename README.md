@@ -17,7 +17,7 @@ Now the magic cookes are saved in the MIT-MAGIC-COOKIES variable.
 
 Next, start your container:
 
-    docker run -i --net host --name kitematic \
+    docker run --net host --name kitematic \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY  \
     -e MAGICCOOKIES="$mitcookies" \
