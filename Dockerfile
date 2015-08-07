@@ -11,7 +11,7 @@ WORKDIR /opt/kitematic/
 RUN git checkout linux-support
 RUN make
 COPY entrypoint.sh /entrypoint.sh
-
+RUN touch /root/.Xauthority
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT bash /entrypoint.sh
 
