@@ -13,7 +13,7 @@ First, take the MIT-MAGIC-TOKEN from the host to be able to access your local Xo
     mitcookies=($(xauth list))
     set +f; unset IFS
 
-Now the magic cookes are saved in the MIT-MAGIC-COOKIES variable.
+Now the magic cookes are saved in the mitcookies variable.
 
 Next, start your container:
 
