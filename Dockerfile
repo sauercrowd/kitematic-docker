@@ -1,5 +1,5 @@
 FROM debian:8.1
-MAINTAINER Jonas Otten <jotten@eonerc.rwth-aachen.de>
+MAINTAINER Jonas Otten <jonadev95@posteo.org>
 
 RUN apt-get update
 RUN apt-get install -y curl
@@ -14,5 +14,3 @@ COPY entrypoint.sh /entrypoint.sh
 RUN touch /root/.Xauthority
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT bash /entrypoint.sh
-
-
