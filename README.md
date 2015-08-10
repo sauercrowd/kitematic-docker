@@ -10,7 +10,7 @@ To start it, take a look at the start.sh script.
 First, take the MIT-MAGIC-TOKEN from the host to be able to access your local Xorg-Server:
 
 
-    mitcookies=($(xauth list))
+    mitcookies=$(xauth list)
 
 
 Now the magic cookes are saved in the mitcookies variable.
@@ -28,8 +28,6 @@ Next, start your container:
 So, we need our X11 socket, the display variable, the magic cookies, and our docker socket. (And make it privileged to be able to write to the sockets)
 
 
-The container won't terminate if you close the Kitematic window (I'm not shure why)
-
-But if you want to start the container later again, just execute ```docker restart kitematic ``` (It will take a few seconds until it starts up)
+If you want to start the container later again, just execute ```docker restart kitematic ``` (It will take a few seconds until it starts up)
 
 That's all!
