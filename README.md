@@ -30,4 +30,4 @@ That's all!
 
 Yes, of course it is, but the reason I've made it was to make it easier for everyone to test kitematic on linux and provide an image which just works.
 
-So please take a look at the dockerfile to see what the Image is doing with the sockets 
+So please take a look at the dockerfile to see that the Image is not doing something evil with the sockets :-) 
