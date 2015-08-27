@@ -1,33 +1,34 @@
 # Kitematic-docker
 
+### What is this?
+
+
 This Docker Image should give every Linux User the opportunity to use the Kitematic GUI.
 (I've tried to install it on ubuntu and fedora, it both failed)
 
-To start it, take a look at the start.sh script.
+### How could I start it?
 
-### Run the image
-
-First, take the MIT-MAGIC-TOKEN from the host to be able to access your local Xorg-Server:
-
-
-    mitcookies=$(xauth list)
-
-
-Now the magic cookes are saved in the mitcookies variable.
-
-Next, start your container:
-
-    docker run --net host --name kitematic \
+    docker run -d --net host --name kitematic \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY  \
-    -e MAGICCOOKIES="$mitcookies" \
+    -v $HOME/.Xauthority:/root/.Xauthority \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    --privileged=true -t jonadev95/kitematic-docker
+    --privileged=true jonadev95/kitematic-docker
+
+or just use firststart.sh
+
+(It takes time to startup, ~30s)
 
 
-So, we need our X11 socket, the display variable, the magic cookies, and our docker socket. (And make it privileged to be able to write to the sockets)
+### I've closed the kitematic window, but now I want it back again... 
 
 
-If you want to start the container later again, just execute ```docker restart kitematic ``` (It will take a few seconds until it starts up)
+If you want to start the container later again, just execute ```docker restart kitematic ``` (Or just use start.sh)
 
 That's all!
+
+### It's so dirty and ugly that you mount xorg and docker sockets and make it privileged
+
+Yes, of course it is, but the reason I've made it was to make it easier for everyone to test kitematic on linux and provide an image which just works.
+
+So please take a look at the dockerfile to see what the Image is doing with the sockets 
