@@ -22,7 +22,7 @@ or just use firststart.sh
 ### I've closed the kitematic window, but now I want it back again... 
 
 
-If you want to start the container later again, just execute ```docker restart kitematic ``` (Or just use start.sh)
+If you want to restart kitematic, just execute ```docker restart kitematic ``` (Or just use start.sh)
 
 That's all!
 
