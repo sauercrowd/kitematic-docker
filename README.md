@@ -2,8 +2,6 @@
 
 ### What is this?
 
-To start it, take a look at the firststart.sh script.
-
 This Docker Image should give every Linux User the opportunity to use the Kitematic GUI.
 (I've tried to install it on ubuntu and fedora, it both failed)
 
