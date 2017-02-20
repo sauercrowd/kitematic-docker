@@ -1,6 +1,5 @@
 FROM debian:8.1
-MAINTAINER Jonas Otten <jonadev95@posteo.org>
-
+MAINTAINER sauercrowd
 RUN apt-get update
 RUN apt-get install -y curl
 RUN curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
