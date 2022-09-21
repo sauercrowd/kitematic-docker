@@ -29,5 +29,3 @@ That's all!
 ### It's so dirty and ugly that you mount xorg and docker sockets and make it privileged
 
 Yes you're right, but the reason I've made it was to make it easier for everyone to test kitematic on linux and provide an image which just works.
-
-So please take a look at the dockerfile to see that the Image is not doing something evil with the sockets :-) 
